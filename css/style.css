@@ -2,13 +2,13 @@
 /********** General CSS ***********/
 /**********************************/
 body {
-    color: #666666;
-    background: #F6D155;
+    color: #8a8989;
+    background:yellow;
     font-family: 'Open Sans', sans-serif;
 }
 
 a {
-    color: #222222;
+    color: #100f0f;
     transition: all .3s;
 }
 
@@ -39,7 +39,7 @@ a:focus {
     position: relative;
     width: 100%;
     float: left;
-    background: #222222;
+    background: rgb(49, 49, 49);
 }
 
 .wrapper .content {
@@ -47,7 +47,7 @@ a:focus {
     width: 100%;
     padding: 15px;
     float: left;
-    background: #F6D155;
+    background: rgba(249, 248, 247, 0.5);
 }
 
 .wrapper .sidebar-header,
@@ -57,12 +57,12 @@ a:focus {
 
 .navbar {
     padding: 15px;
-    background: #222222 !important;
+    background:rgb(60, 39, 0) !important;
 }
 
 .navbar-expand-md .navbar-nav .nav-item {
     width: 100%;
-    border-top: 1px solid rgba(255, 255, 255, .2);
+    border-top: 1px solid rgba(240, 125, 10, 0.1);
 }
 
 .navbar-expand-md .navbar-nav .nav-item:first-child{
@@ -70,13 +70,13 @@ a:focus {
 }
 
 .navbar-expand-md .navbar-nav .nav-link {
-    color: #ffffff;
+    color: #f18282;
     padding: 5px 15px 7px 15px;
     transition: all .3s;
 }
 
 .navbar-expand-md .navbar-nav .nav-link i {
-    color: #FF6F61;
+    color: #f36a5e;
     float: right;
     padding-top: 5px;
     transition: all .3s;
@@ -89,7 +89,7 @@ a:focus {
 
 .navbar-expand-md .navbar-nav .nav-link:hover i,
 .navbar-expand-md .navbar-nav .nav-link.active i{
-    color: #ffffff;
+    color: #f55656;
 }
 
 
@@ -112,7 +112,7 @@ a:focus {
         content: "";
         width: 100%;
         height: 30px;
-        background: #F6D155;
+        background: goldenrod;
         z-index: 1;
     }
     
@@ -180,12 +180,11 @@ a:focus {
     }
 
     .wrapper .sidebar::-webkit-scrollbar-thumb {
-        background-color: darkgrey;
+        background-color: ghostwhite;
         outline: 1px solid slategrey;
         border-radius: 7px
     }
-    
-    .navbar-brand {
+   .navbar-brand {
         display: none;
     }
     
@@ -196,7 +195,7 @@ a:focus {
         padding: 15px;
         font-size: 0;
         text-align: center;
-        background: #222222;
+        background: #000;
     }
     
     .sidebar .sidebar-footer a {
@@ -208,7 +207,7 @@ a:focus {
         text-align: center;
         font-size: 18px;
         color: #222222;
-        background: #FF6F61;
+        background: rgba(255, 0, 0, 0.5);
     }
     
     .sidebar .sidebar-footer a:last-child {
@@ -217,13 +216,12 @@ a:focus {
     
     .sidebar .sidebar-footer a:hover {
         color: #FF6F61;
-        background: #ffffff;
+        background: #4c09f7;
     }
     
     .sidebar:hover .sidebar-footer {
         display: block;
-    }
-}
+    }}
 
 @media (min-width: 992px) {
     .wrapper .sidebar {
@@ -259,9 +257,7 @@ a:focus {
 @media (max-width: 576px) {
     .wrapper .content {
         padding: 15px;
-    }
-}
-
+    }}
 
 /**********************************/
 /******** Back to Top CSS *********/
@@ -300,8 +296,7 @@ a:focus {
 
 @keyframes action {
     0% { transform: translateY(0); }
-    100% { transform: translateY(-15px); }
-}
+    100% { transform: translateY(-15px); }}
 
 
 /**********************************/
@@ -364,13 +359,13 @@ a:focus {
     padding: 15px 0;
     color: #FF6F61;
     font-size: 20px;
-    background: #222222;
+    background: #000;
     border-radius: 0;
 }
 
 .large-btn .btn:last-child {
     color: #222222;
-    background: #FF6F61;
+    background: #f78e84;
 }
 
 .large-btn .btn i {
@@ -389,9 +384,7 @@ a:focus {
 
 .large-btn .btn:hover::after {
     width: 100%;
-    background: rgba(255, 255, 255, .1);
-}
-
+    background: rgb(255, 255, 255);}
 
 /**********************************/
 /******* Content Header CSS *******/
@@ -419,8 +412,7 @@ a:focus {
     height: 3px;
     bottom: 0;
     left: 0;
-    background: #FF6F61;
-}
+    background: #FF6F61;}
 
 
 /**********************************/
@@ -429,7 +421,7 @@ a:focus {
 .about {
     position: relative;
     padding: 60px 30px;
-    background: #ffffff;
+    background: #5e1a1a;
     border-bottom: 30px solid #F6D155;
 }
 
@@ -481,15 +473,14 @@ a:focus {
     height: 5px;
     border: 1px solid #FF6F61;
     border-radius: 0;
-    background: #ffffff;
+    background: #463434;
 }
 
 .about .progress .progress-bar {
     width: 1px;
-    background: #FF6F61;
+    background: #5a150f;
     border-radius: 0;
-    transition: 1s;
-}
+    transition: 1s;}
 
 
 /**********************************/
@@ -498,7 +489,7 @@ a:focus {
 .education {
     position: relative;
     padding: 60px 30px;
-    background: #ffffff;
+    background: #1e93ba;
     border-bottom: 30px solid #F6D155;
 }
 
@@ -506,8 +497,8 @@ a:focus {
     position: relative;
     width: 100%;
     padding: 20px 0 20px 20px;
-    border-left: 1px solid #FF6F61;
-    border-bottom: 1px solid #FF6F61;
+    border-left: 1px solid #200013;
+    border-bottom: 1px solid #8361ff;
 }
 
 .education .col-md-6:first-child .edu-col {
@@ -544,14 +535,14 @@ a:focus {
     content: "";
     width: 11px;
     height: 11px;
-    background: #FF6F61;
+    background: #1c820e;
     top: 5px;
     left: -26px;
     border-radius: 5px;
 }
 
 .education .edu-col span i {
-    color: #FF6F61;
+    color: #fafa26;
 }
 
 .education .edu-col h3 {
@@ -561,26 +552,14 @@ a:focus {
 }
 
 .education .edu-col p {
-    margin: 0;
-}
-
-
-/**********************************/
-/********* Experience CSS *********/
-/**********************************/
-.experience {
-    position: relative;
-    padding: 60px 30px;
-    background: #ffffff;
-    border-bottom: 30px solid #F6D155;
-}
+    margin: 0;}
 
 .experience .exp-col {
     position: relative;
     width: 100%;
     padding: 20px 0 20px 20px;
-    border-left: 1px solid #FF6F61;
-    border-bottom: 1px solid #FF6F61;
+    border-left: 1px solid #61fff4;
+    border-bottom: 1px solid #61ffef;
 }
 
 .experience .col-md-6:first-child .exp-col {
@@ -617,14 +596,14 @@ a:focus {
     content: "";
     width: 11px;
     height: 11px;
-    background: #FF6F61;
+    background: #7e0f05;
     top: 5px;
     left: -26px;
     border-radius: 5px;
 }
 
 .experience .exp-col span i {
-    color: #FF6F61;
+    color: #f91905;
 }
 
 .experience .exp-col h3 {
@@ -650,6 +629,7 @@ a:focus {
 .experience .exp-col p {
     margin: 0;
 }
+.exp-icon{width:38px;height:38px;background:gold;display:grid;place-items:center;border-radius:50%}
 
 
 /**********************************/
@@ -658,8 +638,8 @@ a:focus {
 .service {
     position: relative;
     padding: 60px 30px 30px 30px;
-    background: #ffffff;
-    border-bottom: 30px solid #F6D155;
+    background:#E6E6E6;
+    border-bottom: 30px solid #404040;
 }
 
 .service .srv-col {
@@ -670,7 +650,7 @@ a:focus {
 
 .service .srv-col i {
     font-size: 30px;
-    color: #FF6F61;
+    color: #853434;
     margin-bottom: 15px;
 }
 
@@ -703,67 +683,9 @@ a:focus {
 
 .experience .exp-col p {
     margin: 0;
+    color: var(--theme-text);
 }
 
-
-/**********************************/
-/********** Portfolio CSS *********/
-/**********************************/
-.portfolio {
-    position: relative;
-    padding: 60px 30px 30px 30px;
-    background: #ffffff;
-    border-bottom: 30px solid #F6D155;
-}
-
-.portfolio #portfolio-flters {
-    padding: 0;
-    margin: -15px 0 30px 0;
-    list-style: none;
-    font-size: 0;
-}
-
-.portfolio #portfolio-flters li {
-    cursor: pointer;
-    margin: 15px -1px 0 0;
-    display: inline-block;
-    height: 35px;
-    padding: 10px;
-    color: #666666;
-    font-size: 13px;
-    line-height: 15px;
-    text-transform: uppercase;
-    border: 1px solid #FF6F61;
-    background: #ffffff;
-    transition: all 0.3s ease-in-out;
-}
-
-.portfolio #portfolio-flters li:hover,
-.portfolio #portfolio-flters li.filter-active {
-    background: #FF6F61;
-    color: #222222;
-}
-
-.portfolio .portfolio-item {
-    position: relative;
-    height: 250px;
-    overflow: hidden;
-}
-
-.portfolio .portfolio-item figure {
-    background: #ffffff;
-    overflow: hidden;
-    height: 220px;
-    position: relative;
-    border-radius: 0;
-    margin: 0; 
-}
-
-.portfolio .portfolio-item figure img {
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; 
-}
 
 .portfolio .portfolio-item figure:hover img {
     opacity: 0.3;
@@ -780,25 +702,25 @@ a:focus {
     text-align: center;
     width: 45px;
     height: 35px;
-    background: #FF6F61;
+    background: #7d352e80;
     transition: 0.2s linear;
 }
 
 .portfolio .portfolio-item figure .link-preview i,
 .portfolio .portfolio-item figure .link-details i {
-    color: #222222;
+    color: #fefcfc7e;
     padding-top: 10px;
     font-size: 16px;
 }
 
 .portfolio .portfolio-item figure .link-preview:hover,
 .portfolio .portfolio-item figure .link-details:hover {
-    background: #222222;
+    background: #666;
 }
 
 .portfolio .portfolio-item figure .link-preview:hover i,
 .portfolio .portfolio-item figure .link-details:hover i {
-    color: #FF6F61;
+    color: #aaaa;
 }
 
 .portfolio .portfolio-item figure .link-preview {
@@ -819,10 +741,10 @@ a:focus {
     right: 0;
     top: 100%;
     padding: 30px 10px;
-    color: #222222;
+    color: #9999;
     font-size: 16px;
     font-weight: 600;
-    background: rgba(255, 111, 97, .5);
+    background: rgba(250, 125, 100, 1);
     border-radius: 0;
 }
 
@@ -850,48 +772,7 @@ a:focus {
 
 .portfolio .portfolio-item figure:hover .portfolio-title {
     opacity: 1;
-    top: 50%;
-}
-
-
-/**********************************/
-/*********** Review CSS ***********/
-/**********************************/
-.review {
-    position: relative;
-    background: #ffffff;
-    border-bottom: 30px solid #F6D155;
-}
-
-.review .content-inner {
-    position: relative;
-    padding: 60px 30px;
-    background: url(../img/quote.png) right bottom no-repeat;
-}
-
-.review .review-text p {
-    font-size: 18px;
-    font-style: italic;
-}
-
-.review .review-img {
-    display: flex;
-    align-items: center;
-}
-
-.review .review-img img {
-    width: 80px; 
-    height: 80px; 
-    object-fit: cover;
-    margin-right: 15px;
-}
-
-.review .review-name h3 {
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    margin-bottom: 5px;
-}
+    top: 50%;}
 
 .review .review-name p {
     font-size: 14px;
@@ -903,7 +784,7 @@ a:focus {
 }
 
 .review .review-text .ratting i {
-    color: #FF6F61;
+    color: #61d5ff75;
     font-size: 14px;
 }
 
@@ -922,7 +803,7 @@ a:focus {
     z-index: 1;
     opacity: 0;
     transition: .5s;
-    background: rgba(255, 111, 97, .7);
+    background: rgba(200, 100, 0, .5);
 }
 
 .review-slider .slick-prev {
@@ -947,14 +828,14 @@ a:focus {
 .review-slider .slick-prev:focus,
 .review-slider .slick-next:hover,
 .review-slider .slick-next:focus {
-    background: rgba(0, 0, 0, .7);
+    background: rgb(248, 186, 124);
 }
 
 .review-slider .slick-prev:hover::before,
 .review-slider .slick-prev:focus::before,
 .review-slider .slick-next:hover::before,
 .review-slider .slick-next:focus::before {
-    color: #FF6F61;
+    color: #fa7ab2;
 }
 
 .review-slider .slick-prev::before,
@@ -962,7 +843,7 @@ a:focus {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     font-size: 18px;
-    color: #ffffff;
+    color: #fefcfc7e;
 }
 
 .review-slider .slick-prev::before {
@@ -978,17 +859,16 @@ a:focus {
 }
 
 .review-slider .slick-dots li button:before {
-    color: #ffffff;
+    color: #fafa26;
     font-size: 15px;
 }
 
 .review-slider .slick-dots li.slick-active button:before {
-    color: #FF6F61;
+    color: #ff6f6f;
 }
 
 .review-slider.slick-slider {
-    margin-bottom: 0;
-}
+    margin-bottom: 0;}
 
 
 /**********************************/
@@ -997,7 +877,7 @@ a:focus {
 .contact {
     position: relative;
     padding: 60px 30px 30px 30px;
-    background: #ffffff;
+    background: #fca903;
 }
 
 .contact .contact-info {
@@ -1015,15 +895,15 @@ a:focus {
 
 .contact .contact-info p i {
     width: 25px;
-    color: #FF6F61;
+    color: #26fe05;
 }
 
 .contact .contact-info p a {
-    color: #666666;
+    color: #556503;
 }
 
 .contact .contact-info p a:hover {
-    color: #FF6F61;
+    color: #34856a;
     text-decoration: none;
 }
 
@@ -1035,8 +915,8 @@ a:focus {
     width: 35px;
     height: 35px;
     padding: 5px 0;
-    color: #222222;
-    background: #FF6F61;
+    color: #f77474;
+    background: #6183ff;
     border-radius: 0;
     margin-top: 15px;
     margin-right: 15px;
@@ -1048,8 +928,8 @@ a:focus {
 }
 
 .contact .social a:hover {
-    color: #FF6F61;
-    background: #222222;
+    color: #b361ff;
+    background: #fc2ed0;
 }
 
 .contact .form {
@@ -1064,21 +944,19 @@ a:focus {
 
 .contact .form .form-control:focus {
     box-shadow: none;
-    border-color: #FF6F61;
+    border-color: #ff619e;
 }
 
 .contact .form .btn {
-    color: #222222;
-    background: #FF6F61;
+    color: #7de5f8;
+    background: #0674fa;
     border-radius: 0;
     transition: all .3s;
 }
 
 .contact .form .btn:hover {
-    color: #FF6F61;
-    background: #222222;
-}
-
+    color: #493183;
+    background: #7d5641;}
 
 /**********************************/
 /*********** Footer CSS ***********/
@@ -1087,7 +965,7 @@ a:focus {
     position: relative;
     width: 100%;
     padding: 30px 30px 0 30px;
-    background: #F6D155;
+    background: #887330;
 }
 
 .footer .col-md-6:last-child {
@@ -1102,20 +980,20 @@ a:focus {
 }
 
 .footer p {
-    color: #222222;
+    color: #4c0202;
     margin: 0;
 }
 
 .footer a {
-    color: #FF6F61;
+    color: #fa4130;
     font-weight: 600;
 }
 
 .footer a:hover {
-    color: #222222;
+    color: #8686867e;
 }
 .hero-section {
-    background: #f8f9fc;
+    background: #bfcefa;
     overflow: hidden;
 }
 
@@ -1124,38 +1002,40 @@ a:focus {
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 3px;
-    color: #8b0000;
+    color: #fa0808;
 }
 
 .hero-title {
     font-size: clamp(2.5rem, 5vw, 4.5rem);
     font-weight: 800;
     line-height: 1.15;
-    color: #202124;
+    color: #757985;
 }
 
 .hero-highlight {
     display: block;
-    color: #8b0000;
+    color: #fca4a4;
 }
 
 .hero-description {
     max-width: 600px;
     font-size: 17px;
     line-height: 1.8;
-    color: #666;
+    color: #674141;
 }
 
 .hero-location {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #555;
+    color: #f88787;
     font-size: 15px;
 }
 
+    
+
 .hero-location i {
-    color: #8b0000;
+    color: #905b5b;
     font-size: 18px;
 }
 
@@ -1167,13 +1047,13 @@ a:focus {
 }
 
 .hero-section .btn-primary {
-    background: #8b0000;
-    border-color: #8b0000;
+    background: #863434;
+    border-color: #fc4040;
 }
 
 .hero-section .btn-primary:hover {
-    background: #650000;
-    border-color: #650000;
+    background: #fa5f5f;
+    border-color: #613d3d;
     transform: translateY(-3px);
 }
 
@@ -1220,11 +1100,494 @@ a:focus {
 
     .hero-btn {
         width: 100%;
-    }
+    }}
+/************************************************************
+  UPDATED COLOR THEME — NAVY / TEAL / SOFT GOLD
+  Keep this section at the bottom of style.css.
+************************************************************/
+:root {
+    --theme-bg: #F5F7FA;
+    --theme-surface: #FFFFFF;
+    --theme-surface-soft: #EAF2F8;
+    --theme-primary: #142B4A;
+    --theme-primary-dark: #0D1B2A;
+    --theme-secondary: #14B8A6;
+    --theme-accent: #E7B65C;
+    --theme-heading: #142B4A;
+    --theme-text: #344054;
+    --theme-muted: #667085;
+    --theme-border: #DCE4EC;
+    --theme-white: #FFFFFF;
+}
+/* General page colors */
+body {
+    color: var(--theme-text);
+    background: var(--theme-bg);
 }
 
+a {
+    color: var(--theme-primary);
+}
 
+a:hover,
+a:active,
+a:focus {
+    color: var(--theme-secondary);
+}
 
+.wrapper .content {
+    background: var(--theme-bg);
+}
 
+/* Sidebar and navigation */
+.wrapper .sidebar {
+    background: var(--theme-primary);
+}
+.navbar {
+    background: var(--theme-primary) !important;
+}
 
+.navbar-expand-md .navbar-nav .nav-item {
+    border-top-color: rgba(255, 255, 255, 0.10);
+}
 
+.navbar-expand-md .navbar-nav .nav-link {
+    color: #E5ECF5;
+}
+
+.navbar-expand-md .navbar-nav .nav-link i {
+    color: var(--theme-accent);
+}
+
+.navbar-expand-md .navbar-nav .nav-link:hover,
+.navbar-expand-md .navbar-nav .nav-link.active {
+    color: var(--theme-secondary);
+}
+
+.navbar-expand-md .navbar-nav .nav-link:hover i,
+.navbar-expand-md .navbar-nav .nav-link.active i {
+    color: var(--theme-secondary);
+}
+.sidebar .sidebar-footer {
+    background: var(--theme-primary-dark);
+}
+
+.sidebar .sidebar-footer a {
+    color: var(--theme-white);
+    background: rgba(20, 184, 166, 0.20);
+}
+
+.sidebar .sidebar-footer a:hover {
+    color: var(--theme-primary-dark);
+    background: var(--theme-accent);
+}
+
+/* Remove fixed bars that previously crossed over the page content */
+@media (min-width: 768px) {
+    .wrapper .content::before,
+    .wrapper .content::after {
+        display: none;
+    }
+}
+/* Header / introduction */
+.header {
+    background: var(--theme-surface);
+}
+
+.header p {
+    color: var(--theme-secondary);
+}
+
+.header h1,
+.header h2 {
+    color: var(--theme-heading);
+}
+
+.header .typed-cursor {
+    color: var(--theme-primary);
+}
+
+.header .hero-tagline {
+    color: #99721E;
+}
+.large-btn .content-inner {
+    border-bottom-color: var(--theme-accent);
+}
+
+.large-btn .btn {
+    color: var(--theme-white);
+    background: var(--theme-primary);
+}
+
+.large-btn .btn:last-child {
+    color: var(--theme-primary-dark);
+    background: var(--theme-accent);
+}
+
+/* Shared section headings */
+.content-header h2 {
+    color: var(--theme-heading);
+}
+
+.content-header::after {
+    background: var(--theme-secondary);
+}
+/* About section and skill meters */
+.about {
+    background: var(--theme-primary);
+    border-bottom: 8px solid var(--theme-accent);
+}
+
+.about .content-header h2 {
+    color: var(--theme-white);
+}
+
+.about .btn {
+    color: var(--theme-white);
+    background: var(--theme-secondary);
+    border-color: var(--theme-secondary);
+}
+
+.about .btn:hover {
+    color: var(--theme-primary-dark);
+    background: var(--theme-accent);
+}
+
+.about .skill-name p {
+    color: #E5ECF5;
+}
+
+.about .progress {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(20, 184, 166, 0.55);
+}
+
+.about .progress .progress-bar {
+    background: var(--theme-secondary);
+}
+/* Inner hero/about content */
+.hero-section {
+    background: var(--theme-surface-soft);
+}
+
+.hero-label {
+    color: #0F9488;
+}
+
+.hero-title {
+    color: var(--theme-primary);
+}
+
+.hero-highlight {
+    color: #0F9488;
+}
+
+.hero-description {
+    color: var(--theme-text);
+}
+
+.hero-location {
+    color: var(--theme-muted);
+}
+
+.hero-location i {
+    color: var(--theme-secondary);
+}
+
+.hero-section .btn-primary {
+    color: var(--theme-white);
+    background: var(--theme-primary);
+    border-color: var(--theme-primary);
+}
+
+.hero-section .btn-primary:hover {
+    color: var(--theme-primary-dark);
+    background: var(--theme-accent);
+    border-color: var(--theme-accent);
+}
+
+.hero-section .btn-outline-dark {
+    color: var(--theme-primary);
+    border-color: var(--theme-primary);
+}
+
+.hero-section .btn-outline-dark:hover {
+    color: var(--theme-white);
+    background: var(--theme-primary);
+}
+/* Education */
+.education {
+    background: var(--theme-surface-soft);
+    border-bottom: 8px solid var(--theme-accent);
+}
+
+.education .edu-col {
+    border-left-color: var(--theme-secondary);
+    border-bottom-color: var(--theme-border);
+}
+
+.education .edu-col span::before {
+    background: var(--theme-secondary);
+}
+
+.education .edu-col span i {
+    color: #99721E;
+}
+
+.education .edu-col h3 {
+    color: var(--theme-primary);
+}
+
+.education .edu-col span,
+.education .edu-col p {
+    color: var(--theme-muted);
+}
+/* Experience */
+.experience {
+    background: #F7F9FC;
+    border-bottom: 8px solid var(--theme-accent);
+}
+
+.experience .exp-col {
+    border-left-color: var(--theme-secondary);
+    border-bottom-color: var(--theme-border);
+}
+
+.experience .exp-col span::before {
+    background: var(--theme-secondary);
+}
+
+.experience .exp-col span i {
+    color: #99721E;
+}
+
+.experience .exp-col h3,
+.experience .exp-col h4,
+.experience .exp-col h5,
+.experience .col-md-9 h3,
+.experience .col-md-9 h4,
+.experience .col-md-9 h5 {
+    color: var(--theme-primary);
+}
+
+.experience .exp-col p,
+.experience .exp-col span,
+.experience .col-md-9 p,
+.experience .col-md-9 span {
+    color: var(--theme-muted);
+}
+
+.exp-icon {
+    color: var(--theme-white);
+    background: var(--theme-secondary);
+}
+/* Services */
+.service {
+    background: var(--theme-surface);
+    border-bottom: 8px solid var(--theme-primary);
+}
+
+.service .srv-col i {
+    color: var(--theme-secondary);
+}
+
+.service .srv-col h3,
+.service .srv-col h4 {
+    color: var(--theme-primary);
+}
+
+.service .srv-col p {
+    color: var(--theme-muted);
+}
+/* Portfolio gallery and filters */
+.portfolio {
+    background: #EEF2F6;
+    border-bottom: 8px solid var(--theme-accent);
+}
+
+.portfolio #portfolio-flters li {
+    color: var(--theme-primary);
+    background: var(--theme-surface);
+    border-color: var(--theme-border);
+}
+
+.portfolio #portfolio-flters li:hover,
+.portfolio #portfolio-flters li.filter-active {
+    color: var(--theme-white);
+    background: var(--theme-secondary);
+    border-color: var(--theme-secondary);
+}
+
+.portfolio .portfolio-item figure {
+    background: var(--theme-primary-dark);
+}
+
+.portfolio .portfolio-item figure .link-preview,
+.portfolio .portfolio-item figure .link-details {
+    background: var(--theme-secondary);
+}
+
+.portfolio .portfolio-item figure .link-preview i,
+.portfolio .portfolio-item figure .link-details i {
+    color: var(--theme-white);
+}
+
+.portfolio .portfolio-item figure .link-preview:hover,
+.portfolio .portfolio-item figure .link-details:hover {
+    background: var(--theme-accent);
+}
+
+.portfolio .portfolio-item figure .link-preview:hover i,
+.portfolio .portfolio-item figure .link-details:hover i {
+    color: var(--theme-primary-dark);
+}
+
+.portfolio .portfolio-item figure .portfolio-title {
+    color: var(--theme-white);
+    background: var(--theme-primary);
+}
+/* Review section, if used */
+.review {
+    background: var(--theme-surface);
+    border-bottom: 8px solid var(--theme-accent);
+}
+
+.review .review-name h3 {
+    color: var(--theme-primary);
+}
+
+.review .review-text p,
+.review .review-name p {
+    color: var(--theme-muted);
+}
+
+.review .review-text .ratting i {
+    color: var(--theme-accent);
+}
+
+.review-slider .slick-prev,
+.review-slider .slick-next {
+    background: rgba(20, 43, 74, 0.72);
+}
+
+.review-slider .slick-prev:hover,
+.review-slider .slick-prev:focus,
+.review-slider .slick-next:hover,
+.review-slider .slick-next:focus {
+    background: var(--theme-secondary);
+}
+
+.review-slider .slick-prev:hover::before,
+.review-slider .slick-prev:focus::before,
+.review-slider .slick-next:hover::before,
+.review-slider .slick-next:focus::before {
+    color: var(--theme-white);
+}
+
+.review-slider .slick-prev::before,
+.review-slider .slick-next::before {
+    color: var(--theme-white);
+}
+
+.review-slider .slick-dots li button:before {
+    color: var(--theme-muted);
+}
+
+.review-slider .slick-dots li.slick-active button:before {
+    color: var(--theme-secondary);
+}
+/* Contact */
+.contact {
+    background: var(--theme-primary);
+}
+
+.contact .content-header h2 {
+    color: var(--theme-white);
+}
+
+.contact .contact-info p {
+    color: #E5ECF5;
+}
+
+.contact .contact-info p i {
+    color: var(--theme-secondary);
+}
+
+.contact .contact-info p a {
+    color: var(--theme-white);
+}
+
+.contact .contact-info p a:hover {
+    color: var(--theme-accent);
+}
+
+.contact .social a {
+    color: var(--theme-white);
+    background: rgba(20, 184, 166, 0.22);
+}
+
+.contact .social a:hover {
+    color: var(--theme-primary-dark);
+    background: var(--theme-accent);
+}
+
+.contact .form .form-control {
+    color: var(--theme-text);
+    background: var(--theme-white);
+    border-color: var(--theme-border);
+}
+
+.contact .form .form-control::placeholder {
+    color: #98A2B3;
+}
+
+.contact .form .form-control:focus {
+    border-color: var(--theme-secondary);
+}
+
+.contact .form .btn {
+    color: var(--theme-white);
+    background: var(--theme-secondary);
+    border-color: var(--theme-secondary);
+}
+
+.contact .form .btn:hover {
+    color: var(--theme-primary-dark);
+    background: var(--theme-accent);
+    border-color: var(--theme-accent);
+}
+/* Footer */
+.footer {
+    background: var(--theme-primary-dark);
+}
+
+.footer p {
+    color: #D8E0EA;
+}
+
+.footer a {
+    color: var(--theme-secondary);
+}
+
+.footer a:hover {
+    color: var(--theme-accent);
+}
+
+/* Back-to-top icon */
+.back-to-top i {
+    color: var(--theme-secondary);
+}
+
+.back-to-top i:hover {
+    color: var(--theme-accent);
+}
+/* Small-screen consistency */
+@media (max-width: 767.98px) {
+    .wrapper .sidebar {
+        background: var(--theme-primary);
+    }
+
+    .navbar {
+        background: var(--theme-primary) !important;
+    }
+}
