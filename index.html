@@ -233,84 +233,87 @@
                 </div>
                 <!-- Education Start -->
                 
-                <!-- Experience Start -->
-                <div class="experience" id="experience">
-                    <div class="content-inner">
-                        <div class="content-header">
-                            <h2>Experience</h2>
-                        </div>
-                        <div class="row align-items-center">
-                            <div class="col-md-12">
-                                <div class="col-md-9">
-                                    <span>01-Dec-2025 <i>to</i>...</span>
-                                    <h3>Personal Tuition Teacher </h3>
-                                    <h4>Edachakai,padane</h4>
-                                    <h5></h5>
-                                    <p>
-                                        Provided personalized home tuition to few more students, teaching all subjects with over 5 years of experience. Focused on strengthening academic understanding, improving learning skills, and supporting students in achieving their educational goals.
-                                    </p>
-                                </div>
-                                <div  class="col-md-3" >
-                                    <span class="exp-icon">
-                                        <i class="fa fa-book">
-                                          
-                                        </i>
-                                        
-                                    </span>
-                                </div>
-                            </div>
-                            
-                            <div class="col-md-12">
-                                <div class="col-md-9">
-                                    <span>01-Jan-2020 <i>to</i> 31-Dec-2050</span>
-                                    <h3>Marriage Album Creation </h3>
-                                    <h4>Edachakai, padane</h4>
-                                    <h5>Graphic Designer</h5>
-                                    <p>
-                                        Crafted elegant, personalized wedding albums with creative photo compositions and thoughtful layouts, transforming precious moments into timeless visual stories that beautifully preserve love and cherished memories.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Experience Start -->
-                
+                <!-- Experience section: add this where your current #experience section is -->
+  <main class="hero">
+    <section class="hero-copy">
+      <p class="eyebrow">MY JOURNEY</p>
+      <h1>Experience <br>that shapes my work. <br></h1>
+      <p>Teaching, designing, and creating meaningful work through different skills.</p>
+
+      <div class="carousel-controls">
+        <button class="round-btn" id="prev" aria-label="Previous card">←</button>
+        <button class="round-btn active-btn" id="next" aria-label="Next card">→</button>
+        <span class="slide-count" id="count">1 of 2</span>
+        <div class="progress" id="progress" aria-label="Carousel progress">
+          <button aria-label="Show slide 1" data-slide="0" class="progress-segment"></button>
+          <button aria-label="Show slide 2" data-slide="1" class="progress-segment"></button>
+          
+        </div>
+      </div>
+    </section>
+
+    <section class="card-stage" aria-label="Plans carousel">
+      <article class="plan-card" data-index="0">
+        <header><span>Personal Tuition Teacher</span><small>01</small></header>
+        <small>Edachakai, Padane</small>
+        <div class="card-copy">
+          <p>Provided personalized home tuition to students across subjects. With over 5 years of teaching experience, I focus on strengthening understanding, improving learning skills, and helping students reach their educational goals.</p>
+          <a href="#contact">NEXT <span>↗</span></a>
+        </div>
+        <span class="watermark">01</span>
+      </article>
+      <article class="plan-card" data-index="1">
+        <header><span>Marriage Album Creation</span><small>02</small></header>
+        <small>Edachakai, Padane</small>
+        <div class="card-copy">
+          <p>Crafted elegant, personalized wedding albums with creative photo compositions and thoughtful layouts, transforming precious moments into timeless visual stories that beautifully preserve love and cherished memories.</p>
+          <a href="#contact">NEXT <span>↗</span></a>
+        </div>
+        <span class="watermark">02</span>
+      </article>
+      
+      <a class="chat-link" href="#contact"><span class="chat-dot"></span> Chat with us</a>
+    </section>
+  </main>
+
+ 
+                 <!-- Experience End -->
                 <!-- Service Start -->
                 <div class="service" id="service">
-                    <div class="content-inner">
-                        <div class="content-header">
-                            <h2>Service</h2>
-                        </div>
-                        <div class="row align-items-center">
-                            
-                            <div class="col-md-6">
-                                <div class="srv-col">
-                                    <i class="fa fa-video"></i>
-                                    <h3>Video Editing  </h3>
-                                    <p>
-                                        Crafted engaging videos through seamless editing, storytelling, and cinematic effects.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="srv-col">
-                                    <i class="fa fa-image"></i>
-                                    <h3>Digital Designing</h3>
-                                    <p>
-                                        Designed impactful graphics with creative layouts, compelling visuals, and cohesive design elements.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="srv-col">
-                                    <i class="fa fa-file-pdf"></i>
-                                    <h3>Album making </h3>
-                                    <p>Lorem ipsum dolor sit amet elit suscipit orci. Donec molestie velit id libero.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <main class="demo">
+    <header class="intro">
+      <h1>Explore creative services</h1>
+      <p>Scroll sideways, drag the cards, or use the arrows.</p>
+    </header>
+
+    <div class="controls" aria-label="Card navigation">
+      <button id="prev" type="button" aria-label="Scroll to previous card">← Previous</button>
+      <button id="next" type="button" aria-label="Scroll to next card">Next →</button>
+    </div>
+
+    <section class="scroller" id="scroller" aria-label="Horizontally scrolling service cards">
+      <article class="card">
+        <span class="eyebrow">01 · Memories</span>
+        <h2>Album</h2>
+        <p>Thoughtful photo layouts that turn special moments into keepsakes.</p>
+      </article>
+      <article class="card">
+        <span class="eyebrow">02 · Motion</span>
+        <h2>Video</h2>
+        <p>Creative editing, pacing, and storytelling for memorable videos.</p>
+      </article>
+      <article class="card">
+        <span class="eyebrow">03 · Design</span>
+        <h2>Digital</h2>
+        <p>Polished graphics and digital designs made for your message.</p>
+      </article>
+      <article class="card">
+        <span class="eyebrow">04 · Images</span>
+        <h2>Photo</h2>
+        <p>Careful image enhancement and retouching with a natural finish.</p>
+      </article>
+    </section>
+  </main>
                 </div>
                 <!-- Service Start -->
                 
