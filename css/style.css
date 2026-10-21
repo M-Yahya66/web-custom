@@ -1557,8 +1557,6 @@ a:focus {
     border-color: var(--theme-accent);
 }
 .contact .form .form-group {
-    width: 100px;
-    place-items:center;
 
 }
 /* Footer */
