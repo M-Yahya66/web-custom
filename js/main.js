@@ -75,5 +75,61 @@
         $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
         return false;
     });
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const contactForm = document.getElementById("contact-form");
+        const formStatus = document.getElementById("form-status");
+
+        if (!contactForm || !formStatus) return;
+
+        contactForm.addEventListener("submit", async function (event) {
+            // Prevent the browser from opening Formspree's response page
+            event.preventDefault();
+
+            const submitButton = contactForm.querySelector(
+               'button[type="submit"]'
+            );
+
+            submitButton.disabled = true;
+            submitButton.textContent = "Sending...";
+
+            formStatus.textContent = "";
+
+            try {
+                // Send the form to Formspree in the background
+                const response = await fetch(contactForm.action, {
+                    method: "POST",
+                    body: new FormData(contactForm),
+                    headers: {
+                        Accept: "application/json"
+                    }
+                });
+
+                if (response.ok) {
+                    formStatus.textContent = "Message sent successfully!";
+
+                    contactForm.reset();
+                } else {
+                    const result = await response.json().catch(() => null);
+
+                    formStatus.textContent =
+                        result?.errors?.map(error => error.message).join(", ") ||
+                        "Message could not be sent. Please try again.";
+                }
+            } catch (error) {
+                console.error("Form submission error:", error);
+
+                formStatus.textContent =
+                    "Connection error. Please check your internet and try again.";
+            } finally {
+                submitButton.disabled = false;
+                submitButton.textContent = "Send Message";
+            }
+        });
+    });
+
+  
 })(jQuery);
+
 

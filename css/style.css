@@ -1556,6 +1556,11 @@ a:focus {
     background: var(--theme-accent);
     border-color: var(--theme-accent);
 }
+.contact .form .form-group {
+    width: 100px;
+    place-items:center;
+
+}
 /* Footer */
 .footer {
     background: var(--theme-primary-dark);
