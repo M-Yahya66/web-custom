@@ -233,7 +233,7 @@
                 </div>
                 <!-- Education Start -->
                 
-                <!-- Experience section: add this where your current #experience section is -->
+                <!-- Experience section -->
   <main class="hero">
     <section class="hero-copy">
       <p class="eyebrow">MY JOURNEY</p>
@@ -278,151 +278,322 @@
 
  
                  <!-- Experience End -->
-                <!-- Service Start -->
-                <div class="service" id="service">
-                    <main class="demo">
-    <header class="intro">
-      <h1>Explore creative services</h1>
-      <p>Scroll sideways, drag the cards, or use the arrows.</p>
-    </header>
+  
+<!-- Service Start -->
+<section class="service" id="service">
+    <main class="service-demo">
 
-    <div class="controls" aria-label="Card navigation">
-      <button id="prev" type="button" aria-label="Scroll to previous card">← Previous</button>
-      <button id="next" type="button" aria-label="Scroll to next card">Next →</button>
-    </div>
+        <!-- Centered heading -->
+        <header class="service-intro">
+            <p class="service-eyebrow">WHAT I DO</p>
+            <h2>Explore Creative Services</h2>
+            <p>
+                Creative solutions for your photos, videos, albums,
+                and digital designs.
+            </p>
+        </header>
 
-    <section class="scroller" id="scroller" aria-label="Horizontally scrolling service cards">
-      <article class="card">
-        <span class="eyebrow">01 · Memories</span>
-        <h2>Album</h2>
-        <p>Thoughtful photo layouts that turn special moments into keepsakes.</p>
-      </article>
-      <article class="card">
-        <span class="eyebrow">02 · Motion</span>
-        <h2>Video</h2>
-        <p>Creative editing, pacing, and storytelling for memorable videos.</p>
-      </article>
-      <article class="card">
-        <span class="eyebrow">03 · Design</span>
-        <h2>Digital</h2>
-        <p>Polished graphics and digital designs made for your message.</p>
-      </article>
-      <article class="card">
-        <span class="eyebrow">04 · Images</span>
-        <h2>Photo</h2>
-        <p>Careful image enhancement and retouching with a natural finish.</p>
-      </article>
-    </section>
-  </main>
-                </div>
-                <!-- Service Start -->
+        <!-- Navigation controls -->
+        <div class="service-controls" aria-label="Service card navigation">
+            <button
+                id="service-prev"
+                type="button"
+                aria-label="Previous service"
+                disabled
+            >
+                <span aria-hidden="true">←</span> Previous
+            </button>
+
+            <span class="service-count" id="service-count" aria-live="polite">
+                1 of 4
+            </span>
+
+            <button
+                id="service-next"
+                type="button"
+                aria-label="Next service"
+            >
+                Next <span aria-hidden="true">→</span>
+            </button>
+        </div>
+
+        <!-- Horizontal service cards -->
+        <div
+            class="service-scroller"
+            id="service-scroller"
+            tabindex="0"
+            role="region"
+            aria-label="Creative services. Use arrow keys or swipe to browse."
+        >
+            <article class="service-card">
+                <span class="service-card-number">01 / MEMORIES</span>
+                <div class="service-card-icon" aria-hidden="true">✦</div>
+                <h3>Album Design</h3>
+                <p>
+                    Custom wedding album design and thoughtful photo layouts
+                    that preserve your most cherished memories.
+                </p>
+                <span class="service-card-label">Creative storytelling</span>
+            </article>
+
+            <article class="service-card">
+                <span class="service-card-number">02 / MOTION</span>
+                <div class="service-card-icon" aria-hidden="true">▶</div>
+                <h3>Video Editing</h3>
+                <p>
+                    Video post-production, smooth transitions, and
+                    engaging visual storytelling.
+                </p>
+                <span class="service-card-label">Visual storytelling</span>
+            </article>
+
+            <article class="service-card">
+                <span class="service-card-number">03 / DESIGN</span>
+                <div class="service-card-icon" aria-hidden="true">✧</div>
+                <h3>Graphic Design</h3>
+                <p>
+                    Creative graphics, attractive layouts, and digital
+                    designs that communicate your ideas.
+                </p>
+                <span class="service-card-label">Visual communication</span>
+            </article>
+
+            <article class="service-card">
+                <span class="service-card-number">04 / IMAGES</span>
+                <div class="service-card-icon" aria-hidden="true">◎</div>
+                <h3>Photo Editing</h3>
+                <p>
+                    Professional image enhancement, color correction,
+                    and natural-looking photo retouching.
+                </p>
+                <span class="service-card-label">Image enhancement</span>
+            </article>
+        </div>
+
+        <!-- Progress indicators -->
+        <div class="service-progress" id="service-progress"
+             aria-label="Choose a service">
+            <button type="button" data-slide="0"
+                    aria-label="Show Album Design"></button>
+            <button type="button" data-slide="1"
+                    aria-label="Show Video Editing"></button>
+            <button type="button" data-slide="2"
+                    aria-label="Show Graphic Design"></button>
+            <button type="button" data-slide="3"
+                    aria-label="Show Photo Editing"></button>
+        </div>
+
+        <p class="service-hint">
+            Scroll sideways, drag the cards, or use the arrows.
+        </p>
+
+    </main>
+</section>
+<!-- Service End -->
+
+                <!-- Service end -->              
                 
-                <!-- Portfolio Start -->
-                <div class="portfolio" id="portfolio">
-                    <div class="content-inner">
-                        <div class="content-header">
-                            <h2>Portfolio</h2>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <ul id="portfolio-flters">
-                                    <li data-filter="*" class="filter-active">All</li>
-                                    <li data-filter=".web-des">Photography</li>
-                                    <li data-filter=".web-dev">Video Edit</li>
-                                    <li data-filter=".dig-mar">Digital Design</li>
-                                    <li data-filter=".pdf">PDF</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="row portfolio-container">
-                            <div class="col-lg-4 col-md-6 portfolio-item web-des">
-                                <div class="portfolio-wrap">
-                                    <figure>
-                                        <img src="data:image/jpeg;base64,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" class="img-fluid" alt="">
-                                        <a href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQBDgMBIgACEQEDEQH/xAAcAAACAgMBAQAAAAAAAAAAAAAEBQMGAAIHAQj/xABHEAACAQMDAQUFBAcEBwkBAAABAgMABBEFEiExBhNBUWEUInGBkQcyUqEVI0JiscHRM3Lh8FNjgoOisuImNENFVHOSk/Ek/8QAGgEAAgMBAQAAAAAAAAAAAAAAAgQBAwUABv/EACgRAAICAQQCAQQCAwAAAAAAAAABAgMRBBIhMRNBUQUUIjJhcRUzQv/aAAwDAQACEQMRAD8ApCw+lTJAT4U6jsPSiotP9K3vKjz/AIZsRx2jH9miUsGPWrBDp4o+DTx4jNC9RgJaVvsrEemsaJj0onqCatcWnL5UVHp6+VC9SWLRIqkWlfuUVFpXpVqSwUeFEJYr5VW9Sy2Ojj8FZj0v0FEx6WBVlSyUeArcWyjwoHqGWfaL4K8mnAdanSxUeFOjAo8K8EQHQZquV7DWnSFyWYA4FTC2x4Z+VHd2McCq72x7WWfZa3jMsTT3cvMUCnHA8SfAVX5GEqRv3Sr5fWve7WuKdpftAm1yS2Y2BgWDnalwSrE9Qwxhh6HigJO3vaEDu7S7FpAPuxQQRIF8+ieddvC8B3oRAnAHPlWyxKTjxrglx211C6Rfa2e4mUDbLKsYdMHPuuqBgPTNX7sx9p1pqFxDZX9nLbMVCibeHBYdc55qd2TnTg6B7OPKvDAoqZJY2GVYHy9ak27ulDuZ3iQKLdT4UPcwlVJUU3jjrdrdWGCBUeQ50ooV/d3EbFVQ0plv7rJ/VmulSaVA/JUfSoJNEtSOY1+lWq5AfbnL59SuMf2TH5Uulvbt8kQv9K6pLoVtniNfpQz6GmeI1+lQ7iVp0cvW5uicNGwqVPaJD9xq6HJ2eVz9wfSprfQUTrHXK050I5+lhcP1BryTR5TzsNdK/RUa9Frw2C/holcVOg51baQ6clTRy2GF5WrhJZAeFDSWnpU+Yqlp8lSmsRjhaV3OnncMCrrNbKBzildyI0I6UasyVKlIOitlNFx2w8hSmC8PjxRA1HYOWFLb2bPh/gdQ268cUfFbrjpSC31aPIG4Zprb6ihHWobkcq0NUtxxxRCQDyoBL9D41Ol8vgarcmWeIPWAeVSrCPKhEulI4Nbi7A4J5oHJolVhXdgVoyCtVuVYcEVsXB9eccULsJ8Yp7R6tb6Dpc2oXccskUe0FYgCxLEAdTjqRXPL/wC1OfaG0/R41Rhw1zOSR8VUDy8Gr37Ve1rSrdaDYLDJEGQTy5O4OrElORjHC/nXOy6i1Ee1dzf+JJ1+QFWReVyVvCLDdfap2kFwuw2KxhuUituoz0yxJpNrl7N2k1W51K8yvePiKENkIg6L8APqc9KWw2MWSWkJ2jIHhRz4SNIx7uRlj6eP86lcEAnsqD3dw48hn6177KvgfyoHvLmYgxsQGICqvU56CrKnYbtUygqsIyM4N0oIoJTiuw41zl0hP7OFYZ2ny46VvdxCForgDaAE2uo6sAM/nn60RNouq6fNeRX7KstrB37IWDBk9DRlpax6haXVjwBLH39uxOMOOfzX+Ao0/aBaxwzqf2eaumqaf7M7fr4E9zP7SZx+X8CKuiDHwr5007W5tPs0Wxungv4ZduSm4NHtA+RyD8qeWf2kdpYB3ff2VyR17yA5/JhXSeXlERXHJ3ZSMcVshz14rilv9ruso2250mwm/eVpI/5tXh+13XROXFpYpHniLazceRORQchYO4qOK9ZARXGYvtn1BeH0ayH7yzOPyP8AWmlz9qcl/pMYtLR7OdnAuJjgiNc8lM8ZIzgnOOtdyRg6d3HgRWeygjpXM+x/2lyPrf6I1OJ2tJXPs95K3vopPG7P3l/ezn4jp1Lv1Iz4ehoNwW3gh9mUV4YF8Kke5jHjQ8t9CnVhXbjtp40S1FJCoqB9Sh86Gk1BD0JolMh1m85jQHJANIr/AFCGInLijro96px41UNZsHLsdxx8avg0VyreDTUNcgXcBIPrVZu9b3v7hJFbT6cMncM/OgpbFQ33RTax6FZVlz9ik8BUE2nzFT1p4k6N41Ou1uc159aia6PW/bxfaKe1jdRtlQ1FW4u08G+dWpYFbnipUtk8hVn3s/YL0tfwV6OS7UVMl1dJ1qxLaoR0H0rb2GNiMqPpRrWt9oF6asTQahcr1GfnRB1Ob/RmmosIvw/lWHT4/wANT90n6A8EPkX2+qPn3lIpf277S3Wndnwunoxnu37nvAcd2Mcn4+Xzp1LYAfdUUh7V6LPd6WxheNRbqXZZFzuGPA+BFArYykDbSlDKOUajcMXlnKAgyktu4G4+GPPGD86i3b7aR1VEKIHJxnr0AH+enqKHnuBfIhMgUthnQjq2AMj6Ct0triWHZDBLKq+6W4AHpThkYNbaYuu5ueMg9OfhRN8xW3uueQO7HzOP4ZqBNPvkibZZyA8EHcvgQfOtprXVpUkjaxbLsGOGHhn19a44Et5DAUmTG6Nwwz6HrVpj1+/TDLd7h4DNJ9P7OahdwvI8sFsysFEcx5Ix14ouXsldom4ahYv5jcQRQSrUu0XVah15wHS30l/b6vc3L7pP0cYycfvcDNAaBM0b2Uvir7eTj9sj+BFC3OjX9paDbcxTo8mHhhbJ9CfTwqKB9RtgojsnIRsqT59aNcLBXJ7m2QXb9xq17GFGEdwPDpXumzSHU0aOJF3OuM8hRuB+mM5qUWN7NcvcSwuJpmLkbfOidIsxLrVtbPbM7tKFli2kEICN2fTbnNQQTarFCbn2myAW2nJeIgcYzgj6/TNKpVxnoBkZLDOKOMkSf/y+0yv3MzhowvUD9tSOvA5HzrNVsXsLtoDcd6pRXSQDh0YZB+PgfhUkEUcWmyBFnuu7xjcyL18858f6VarG9sLfSwtmsNyJEEU0Hs7ZYHaC2QfvZLfJfWqcqFn5Y89SBmrH2Q9ri1qx7pgEedUdWYrkfHBxUohnReymj6d2p7Fw2N7DtutNd7QToQJYtpypB9VK8HjrV0isWtrSK3gJ2RIEX4Cqj9mkjR9oO11s2Ai3qMAGyBkEdcDyHhXQ9wPhSFssSwhuK4RXLmyuiSVJ+tAS2V9+H86uDbTULohqvyMNFVg024cjvBijE0ojnJOKckop5NeNdxKME4oozZLQpaxkA6Uk1LSrqTJAq1NqFsTt3ioZbu3ZThx9aZhNlbh8nN7rSbqPOVpPNZzh+Vrol/cW/OSOfWkUpt2cnIpyFr9lE6YsVW1/kZVtwHgOKOg1RMdaqkAuYHxgADxNKTqd0txKIj7u9tp9M1Vd9PjHGDQ031qFixJHT4tTTHL8UQmox+D1y9NTvvOpU1S+z96l39PHP8jU/wDk6rFqCfjolNQT8Vcvg1a7HU0autTADINVy0E10EtVp5dnSVv1/FUyXYb9oYrma67IDyrUQmuz+AbFAtHYS7KPTOhy3afiFV3tvfPH2Yve4ba8qrHuXqAxA4+tIxq078tQfaHUFk03uGPM0ihR5kc/yNF4HBrJTbZDxvBQiBBad5G0ahJDGFC5JIAOT5DkfnR+pye1aLpj4KiWdiwB/dWlsiwu6mVlVj4bsU21YBdM05RgYmbCgdBtWn494MGTwh7H9nbyRo4vgNyhh7hPBHxr1vs7kRSzalGqDklkIA+e6ut2dhusrY4yO5Q/8Ioa87PC7JDz3IU9URgBj6U8nUkJ5tz2can7P6fb+6dcEvn3NuzD67sUTY9lrG8UtH2gijK9RMmw/m9dBvOxWlW2Jbhrph4KgLE/AAV7F2R0iKATLpVzMSTtEkoU488dR8MVO6r4CxLHDZS4uwcNwcQdoLeVvwwpvP0DUXF9lcsn/nGPQ27A/TdXQOzumbXae1sIrSA9d7szv4+PAFe6xqItZCkWt6db5/ZkXeV+ODQtwbwiM2fJzDtR9nzdndCm1KTUu/Ee1REIyMljjzPTrSTVdRNprd7MxcGaxMAYE+6zIuCfTirh24kS70SWWTWba8nUoBHDEysRuGTk+Wc1R9VXvdTlPOIwm5v9kYA9aXvglgYrbxyLdMn7u975SxKurqM/dwwJ/IY+dG6qCtnors24my259FcgCge/hRnwjBRwx460zu1W+7P27WgbdYkiRCP2TkjH+fA0uWgFr71wBVl0/jWtKjHGZE6fGqxZkd5kdP41ZdObPabRB/rU/wCapRxfPs4m/wC0Xao+dyn8XroPtGK5P2Mv1tdc7Rs5wZbnK/7JYH/mFWpteiz96srUJ72a1ValBMtjXK+JqJ7qP8dUu77SRxgkNuHpSe47XI6lVyDVKjNst8UV2X2e9jPHeVGyiVc76oGjvq2szSS2qHukPMkh2rnyqwPeXumbIryEDIyGD5DVKmovDYSrT6G7WIJzk0v1KExRsQx49aHj7SRsSu7aRwQTjFLdX16Moys/vHxzTcJtAutLsR3uoursoJOPWlT6rIG6t8qn/tizdQfOg7tUXA24q13PIs6l2EXF9PKHjREiU9do5PzpdFbgsR61MblSMjrXkM3vfGtR2N9iFdMa+kEraAgYFFLYqqgsOaktpFbbRsoVlDKaqcxqMULu6Veg6VPDCJCNoHNbYBzRuloA493JofIwtuSP9FlvAZFZHZtvCbSTmnbgDBHj1oyzES7WKgmqrLmi2NaFy2ChR7h6eVV/tBpRDQSoCVSXcR8iP510yGCKeL8KZwAPGge0OjW8Wh30uxu8SItnPT4UpukpLPsi1xcGjhNw7mEQJEMby5I/ayAAD8MfnTHUUaPTNMV33MpYZ/2VoKbvI4BLuTBdlC9WOAMn064+VF65KJNI0yQcKzsRj+6vFO5MpNPB3qx7T6YtlbIZRuESLxnrtFEL2m04n3ZSeccKTmuMz6pJYPDazLJPI0I2jeFUAjpnHzzilEmrNMgjaWVW8MzYGOB8fzpTE2+JGlilJZR3Ru02hyM+6O3cqxU74wDx18OaEj7WaYL2WyTfaRbO8LrHEEJPUdDzXJrDtDIunT77gSW7YU29y3ebSR15GcfMU50/Uh3cMb6dbW6zDahQhYweoI9DzkY44qt2WxzkJV0yxwXS91fS7hu4k1eW4jYZ7orGsfzxHiq5Jcacbt4rf9Sp6S7ECv6e6oNL9We4solW8xeBv1hlh91eSRk+fXpjwNM7fQ4LiH2l1gVpAOPHGMY4+Wf/ANzMfqEq1lMJ6OEnwhV2jV10aTfuUMfdHPIBHP51TdWdGubpWJG6QZI8PdQfwz9TV97XaNBZ9nGnjQboxtVyBlORwOOnJ9a57qa5aGb7vtMCSEeTAYz+VNV6iWohukI6iqNU8RAC7SSIz7pJWBDZHjjj+VWWyyJ4rZ23d/Gw2k9csvP+fM1XkeVTlkDN+LmnnZJ5X7QI8zEuyHJPgAVwKPAuxDYSFXAwDjjmrDpUwPaXRyWyRcL8veIqtQHbz4k0x0m4xr2nSMeEuEP/ABZ/nXIkunZmETa9rQZc4lbA+Mh/pTm80iVffWNtuOeelBdg17zX9akJxH3p97xyXY1fbxEW3JyMAc5rH1NjVrNvT/60c5Nl720sefCtxpikYCgnzp3diLeSmCc1FvCgceFcpvAy60WDsh3A0pLRCO+iJ3qeCcnritu1LQyW6wHa0gbccH7o9fKue6vcmFvcb3z0IpYHmwdzEg9fePNVLQqUt2Rd2KMhjemOW7PdPu2KFY58R/n8qBvmTCKCCQTk5oZNwYgDrUpiJHKjNPxrUeMlUpuRvHcbEAzS6+vveAHNR3UUyZwcUA0Tk55NGorJU5PGAwSitDc7XHNQLmvJIt3pT2WJuQ4tL0HHNN4rncg5qp2sMpkAQMT5AZp7Bb3Ea5kVlGPEVVKai+Rmiq2zmKGycsCOlN9Og3jfuKqD0HWlmnabqVyokgs5pIz0YLwaa20jQAwzI6SL1VhgiujZCTwmWOEl2T3cwRCVUEgedMNE0q7vLdZJ5O5V+UUJuJHn6UpeMyzJGwOXYLjyzXWbdIkwYlXaRxxxj0obap2xW3gBWqHDEthZJaQj33dgOp4x8qV9vb2e10CQxR94J3SGQn9lWIBNW+9iUwuxXB29QKpXaW6RtLms3mPevHkKByPj5dDSU42V2RUueQ+JwbXBwueGL2hg5wNxGC2M4o/X8HStOwMAOwGPAYWgr5stNCsRZmuHbvAOWHGB6Y5PzqbW98Wi6arsGdXJOD+6v9K0TKXDHEt1YzWkk7ySrfpiMLJhlkTGDgbR4HxNILmOO6uHZFMURPQtwPQHGT9KgOqhjlrcDzIfOfyqQajERzACf7+P5UMKYR5yMT1EpLGDRYZLbft2OCuF2eB9afabHZzaddvf3Cl5GBjhc44B8PL5eVJv0jFjHs+f95/hWfpZQcGzz/vf+mplVFvKZELZR7Q1tdW1HSAiWN4ZoDz3TYbbz905HGfMVdtG1zs7fSLNdSzaXdLGFO4rsz4kEj3h0681zb9MLjAswOMf23/TWy6rFwTbAH/3P8Krt0VFvLeGFHV2V9dHRO2WrWt1oFxZxahbXbDDK0B27uRnK8nPAPBrnWoN+o07920FbSarG8TL7NyQR/af4V5eglLEAHf7MuF88niiqojRDbF5KbL5XSzJYIrj2bvmMLhIyPcRDudvVj4UX2dnFrfmachdtvJjHnwfrwfpSoByrtvUKp2sU561vBiKwvZGwSyBBnzz1FGCDRdB+dH6TGG1qyz/AKRf5f0oKPAGfCmuhGNtatd/Chlrl2SW/snex2cmtyS57s3HB+Bb+pqXU+1iyZhtpHfPXGeKE7M6aNUt9UAkMY9pJU7cg8t4V5LpLabcd3LCP76jg1j2Sqd8k3yb1EX4osni1ULH13ZHGac2d3G8KkbckZzVXv40UYQEHFE6VMYYtpOcdN1dOOVlFzsxwzfWo19oR1XAYUKU2oDXuqXil87uaBN+uMdfnV0M7ReSWSWNssT5USJAfKgrZ+8Pu+Jol4gF4bDfCp3EOJBdbXBzQG1fCiJkfcR5VDsYeFTuA2kcVo7sAgznwFEfo2TcFkDLnnBGKvXZu0js9OhmQBppVDM/iAegprIILqSFblFIWRSC3VeaC36uo2OKj0VV6L8cti7QOypitUeR1iZxu2hdzY9fKibvQmjvLdZQJLZ5AC44PwIqyqRu6g0TOqewyGTGeCM+eeKxfubbJuTHYWutbUQ2+1QFUAKvAA6ClnbKBG0ZrsACaBlIbxIJAIpokkBhL/2ZVckCqJ237RrdWYtLVHER5LNwXPgKu0cLZWrBVdNJNsT/AKTmNzDIHJRHDACut6LrEd1aoYZU6fcY9K4RayS5Gxm+dOLKW4RgdzfI4r19HCcX0Y1rcnuR1/XdZWys5C06h8e6i81zVdfSOWUXcbz7nJEi9fgRQ0ks8xO5mJ8STmgp7Uhdq/eznmnYV0yWJCNtt8H+BXdXguhfSvY27S27sWQj7wHkRUTTalIiJ+ipXRfBoyefOrPb2zjkj60h1vtIEJt9MYccNP1z/d/rVd+mprjucimrU32T27V/YtkuhDJsudIQP+Fsg1pFe2BmHfWBSM9SrciodPuPZrtbqbbKMMMFgxJKkcjOfGmH6ctgv/dkOPOMVnZ5NPHBvNDpTWxmhuLcFTt7sthj648qCDWOeWTI65o5dasmGTbKMf6ug7jVzIxEdnbqPxFNxrtxCTJZRp8TlO8gfAByjAjkZ61o5stucg8EgKRk0N+k7jwSD5Ritf0rdDoIR8EFdknBIuoRoc+yA446+NbNPd6jumjtpHxtQGMEhMcgUvublrh9z7Qf3VxVq7HvF7BdIzAMsqMd+BgYPNBKTSDrgpSwxENPv9pEdjc5PX3DXjadqZ4axuNuc47s1fzd2MEZMl1bj171f60ov+0unxROLf8AXy9FxkJn4+NUq2xvGBmVFUV+xVhp2odBZ3H/ANZptpXZTtJfSh7OwlQLjMkjKgX1yT/Ct4e0sLKPaLUqR1aOTGfkaunZTtro1vG8F1LLCHwQzoSARnrj4+VTe74xzBZKq1U3yy8dgOz0fZ/RBGZBLPLIXmfrhvIHy/rRXajSotSFrgrG/e4dwM+5gk/wH1pIe1VpHHnSb61uZH52K4Ipl2dWbUsatqrkt78UMCDaqLnnjxJIrz1tVilvl2OweOU+ADUuyFjNasLNpEuQuUZmyGPkfjXLr26NpJtKHcDgrmuydqLxNI01r23UschBGTwGPQn0rleg2kOq9qbSK9AaKRyXX8RAJx9at0ltiTc+hjO5ZK1evdSp3jIyr544pd3siMN2c19KzWls9u0DwRmErtMe0bcfCuBdr9Ni0zXr21tiTFHKVUHwHXHyzinNJrI3NxwUWReMpmun3BTBzTiKRZRuyartgHdlRFJyccVY44JIAvfwSQ56d4hXP1orpKLLa3lBaWwdNzUHdQiMjFHCX9XgcAUBdOSRVKm8ljSHvZTUV1GOGw3hJkG0N4FB4/EV0GG3sYY1TukcgY3NySa5NoKvo2sxNOcwkY3DyPj8q6RE+9VdcEEZUjoRSuorip7odMW3TcVn0DaxeyaHDHLbqJ7Yvt2M3vR/Py+NEWWqtq9usgIAB5jHVT61X+2WqItmtmGzIzBmH4QOmfWqxY3jRtuR2RvNWINFVpPLXuxhlisUXydQuruKxtHmkOCBhQf2iegrlXaCbc4wcgGiNS1r3Dvmkkc+LMSart1dmQknpWrotFKpCmq1EWM9P2nmn0aqUABqn2t0VYAU6tr0jBJPXzrYrg8YM/zRLTYWTSjLHipLjS1UlkJJ9a006/BgAUj4UTJeZjO9qPbLJbmDjkrOvuV0m8QHB7vGf4/lVYvNBt4bS1uUmkzMmSDjirDqk0dwJo8+6+QaVajcI1pawqWDRKVYkY8qnVRbw8CNFkctIrl9aLbBCjlix8cVrDZFr8WryKjdST06ZonVsd3D72cHpQt6kks5lVQFfpg0gxtDGyso55pLdpY4pUzhXPDEdRmiEtrePIkjiJBwTvB/nSrT2ltZ1mKAhecBgDRGuahFqkxuUByQMq3XipODTFZDrHD/APIf1rPZ7ULn2ZTnoQKrqLvYKoJz4VYbSVVeC0uJO5YRgBn+7+VC3hZJSy8I0eGAdIE+lRGOIcbBjx9aaahbW1tDvGoRSyeCRqTmk0kvB97HyqUnJZQbW14YDqAUXGEAC48KHUM33QTUtwjbt5bcPOmFt3VvphkYDvXfrjoK7DXYDF3dOBluM16oIP3gPlRYdHANYYlPOaJZXRxCruvKvmnWkdrtd0hdlpfzLEOe6f3059D0+WKTNEtaMvzoZfmsS5CTa6LxefaNd6pZx2mo20OwNuLRZG4gccelP+zOo9l9Tkgt7VGj1HIKGU7W3Dn3W6VyQ0y7Nbx2j0vZ/wCriP8AxCk7tHU4PHH9DNepmmonYde7Tatpkr2fcxliuVn2nOD6dMg1zvULR7pzJKxaR2LMT45rpvaRIrq03TYEhYFOeg9Ko10Fhcxtxj+FZFU1CWILk0/H+OWMfs3sreO+upHUGaJQY8+GTyRV51JYruylguRujZSTnwOOtcpgup7S7SexcrKOFx4+lWy6fUr7T+6u71Id64fuI8Z+JJz9KC+tymptlOfgqAvAhKg5Gep8aHlvQW8KD1i1msbkxN1AyCD1HnSd5nz41p10JrKKpXtPB0W+2YiVvvjk1EJ5IUPdzSxqfBHIzSq7vmEpYsD50tvNccDZHyaOnSt4BnfGKJ9ZugOh949ec5pWl/OFwGwKElleZ98jZPlWu7FatVcYLDMyy2UnwEtKzHLHJrzO41CpzU0YpqKz0KyyF2seGBpkPuig7Y8CimkCocGna4pLIjZKWcI2XUJbUnY2KlGsT3Pus/FI7mbLk1HBc7H60tO1KRcoT2Fi3KQQKW3Y2zISDjcK2hueOtZO6SAtI5SKPmR8Z+AHrVdl2VgHTUtTyAIIpIizqGAPug+HrUtzJbzrGEg7kBcOe8LBmHRgMcfCgIZiFZGOBnI8q33jbhjgeODz8qSNQ2u7OW3KxyqitIp4Krxg/CoJbeKOPJlI459fhRuoXcUx3rG0UCkiNWOTg89aUSyPMxJPHgPKhZJ5uIYFfCmllcx3Mfs92TtPQjqh8xSoKx6KantYwxctkMo4ooP16IYVc2ktrKUccYyrDow8xULK3j0pjZXHtUTWk/JQEofFT4/Kh8A0zsXpgOz5IbdNzYIyD5imUuiXkyAwbdg6AHFa20a714q36fDmJceVX1aZTWGZ+q1vh5RQZ7C7gJ72B+PHGaGLFeCrLV+1iILGeOaSPIgXa6ofioqmenwxrTalXRyVvfjxIrwtmml0luT7kKZ9KFeCM/sD5GqXS0Mb0BZo3Sbs2WoQXI6wncvxxxUTRRjqCK1wF6Gg8W7h9Exnh5Rem7Te1JuklYt47mzikt1qxuLosG46VXefxGvVcjqaTX0+ut7kPPXSlHay12cvvpL12sDVuGoQzRCTvAp/aDHGK55Y3eABkU9jdZEHIrPvp/LkthLeuATtDOLy73ryFXaD5+v50iMDMeFqwzWu858K8jswniOaZhLZHCAccsrt5cys5y1Dr51lZWrEz58s2rzxrKyjAJoxRC1lZTNYvZ2TxsRwK9kkbB5rKyr/AEL+xbO5yaEVjnrWVlZtn7D8F+IVDK/HNF3eTpaOSTulIwTx0rKyh9HR/YWKPcJ681Iv3dx5x4V5WUBaRPK7n3jwOgrTPNZWUJxNCzc4Yj4VJFIzEA4rKypicHabxeZHXuiP4Voh96srKcr6FrO2MLYdKtGluxXFZWVo0GJrv1M1kZjJqqXBO9qysqi/sv8Ap36Abda1PWvaylPZs+iKUcUM1ZWVD7CRleGvKyufRx7GxEgwacW08gUYNZWUhqUsF9L5GlnM7hgxz0qfefSsrKVSGmf/2Q==" data-lightbox="portfolio" data-title="Project Name" class="link-preview" title="Preview"><i class="fa fa-eye"></i></a>
-                                        <a href="#" class="link-details" title="More Details"><i class="fa fa-link"></i></a>
-                                        <a class="portfolio-title" href="#">Project Name <span>Photography</span></a>
-                                    </figure>
-                                </div>
-                            </div>
+<!-- PORTFOLIO SECTION -->
+<section class="portfolio bento-portfolio" id="portfolio">
+    <div class="content-inner">
 
-                            <div class="col-lg-4 col-md-6 portfolio-item web-des">
-                                <div class="portfolio-wrap">
-                                    <figure>
-                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg5DtaDdjwathvQEJ69sjIdUOrigDTHsfKkLzMuNs8eQ&s=10" class="img-fluid" alt="">
-                                        <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg5DtaDdjwathvQEJ69sjIdUOrigDTHsfKkLzMuNs8eQ&s=10" class="link-preview" data-lightbox="portfolio" data-title="Project Name" title="Preview"><i class="fa fa-eye"></i></a>
-                                        <a href="#" class="link-details" title="More Details"><i class="fa fa-link"></i></a>
-                                        <a class="portfolio-title" href="#">Project Name <span>Photography </span></a>
-                                    </figure>
-                                </div>
-                            </div>
+        <div class="content-header">
+            <p class="bento-eyebrow">MY CREATIVE WORK</p>
+            <h2>Portfolio</h2>
+            <p class="bento-description">
+                A collection of photography, video editing, graphic design
+                and album design projects.
+            </p>
+        </div>
 
-                            <div class="col-lg-4 col-md-6 portfolio-item web-dev">
-                                <div class="portfolio-wrap">
-                                    <figure>
-                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSli8gCB_b_8LjxbzsFCnkPjKtsFExp9iQmWFXVpQCokw&s=10" class="img-fluid" alt="">
-                                        <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSli8gCB_b_8LjxbzsFCnkPjKtsFExp9iQmWFXVpQCokw&s=10" class="link-preview" data-lightbox="portfolio" data-title="Project Name" title="Preview"><i class="fa fa-eye"></i></a>
-                                        <a href="#" class="link-details" title="More Details"><i class="fa fa-link"></i></a>
-                                        <a class="portfolio-title" href="#">Project Name <span>Video Edit</span></a>
-                                    </figure>
-                                </div>
-                            </div>
+        <!-- Category filters -->
+        <ul class="portfolio-filters" id="portfolio-flters">
+            <li class="filter-active" data-filter="all">All Work</li>
+            <li data-filter="photography">Photography</li>
+            <li data-filter="video">Video Editing</li>
+            <li data-filter="graphic">Graphic Design</li>
+            <li data-filter="album">Album Design</li>
+        </ul>
 
-                            <div class="col-lg-4 col-md-6 portfolio-item web-dev">
-                                <div class="portfolio-wrap">
-                                    <figure>
-                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7GUBKRq0B3V-uqPI2d_5zNc1MSA3Pv-fNzdatRe0maw&s=10" class="img-fluid" alt="">
-                                        <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7GUBKRq0B3V-uqPI2d_5zNc1MSA3Pv-fNzdatRe0maw&s=10" class="link-preview" data-lightbox="portfolio" data-title="Project Name" title="Preview"><i class="fa fa-eye"></i></a>
-                                        <a href="#" class="link-details" title="More Details"><i class="fa fa-link"></i></a>
-                                        <a class="portfolio-title" href="#">Project Name <span>Video Edit</span></a>
-                                    </figure>
-                                </div>
-                            </div>
+        <!-- Bento grid -->
+        <div class="portfolio-container">
 
-                            <div class="col-lg-4 col-md-6 portfolio-item dig-mar">
-                                <div class="portfolio-wrap">
-                                    <figure>
-                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIohGVdgNm38HoAC8iuAJR33AqS9deD7pZv00qUJdMDA&s=10" class="img-fluid" alt="">
-                                        <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIohGVdgNm38HoAC8iuAJR33AqS9deD7pZv00qUJdMDA&s=10" class="link-preview" data-lightbox="portfolio" data-title="Project Name" title="Preview"><i class="fa fa-eye"></i></a>
-                                        <a href="#" class="link-details" title="More Details"><i class="fa fa-link"></i></a>
-                                        <a class="portfolio-title" href="#">Project Name <span>Digital Design</span></a>
-                                    </figure>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-6 portfolio-item dig-mar">
-                                <div class="portfolio-wrap">
-                                    <figure>
-                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToqK8lS2jzQzNWidCL01MJJ7CCaNCGMpYeoT6CqKuA-w&s=10" class="img-fluid" alt="">
-                                        <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToqK8lS2jzQzNWidCL01MJJ7CCaNCGMpYeoT6CqKuA-w&s=10" class="link-preview" data-lightbox="portfolio" data-title="Project Name" title="Preview"><i class="fa fa-eye"></i></a>
-                                        <a href="#" class="link-details" title="More Details"><i class="fa fa-link"></i></a>
-                                        <a class="portfolio-title" href="#">Project Name <span>Digital Design</span></a>
-                                    </figure>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 portfolio-item pdf">
-                                <div class="portfolio-wrap">
-                                    <figure>
-                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPlyLK50vSBnf3TdHZsn7YAMGIKCMAj2G9uU2Aa8wfHg&s=10" class="img-fluid" alt="">
-                                        <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPlyLK50vSBnf3TdHZsn7YAMGIKCMAj2G9uU2Aa8wfHg&s=10" class="link-preview" data-lightbox="portfolio" data-title="Project Name" title="Preview"><i class="fa fa-eye"></i></a>
-                                        <a href="#" class="link-details" title="More Details"><i class="fa fa-link"></i></a>
-                                        <a class="portfolio-title" href="#">Project Name <span>PDF Design</span></a>
-                                    </figure>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 portfolio-item pdf">
-                                <div class="portfolio-wrap">
-                                    <figure>
-                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR440d8x7bHqaXr4kGVjCm35pxG0Y9JKN8Qhajq6h989Q&s=10" class="img-fluid" alt="">
-                                        <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR440d8x7bHqaXr4kGVjCm35pxG0Y9JKN8Qhajq6h989Q&s=10" class="link-preview" data-lightbox="portfolio" data-title="Project Name" title="Preview"><i class="fa fa-eye"></i></a>
-                                        <a href="#" class="link-details" title="More Details"><i class="fa fa-link"></i></a>
-                                        <a class="portfolio-title" href="#">Project Name <span>PDF Design</span></a>
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <!-- Large featured project -->
+            <article class="portfolio-item bento-large"
+                     data-category="photography">
+                <a class="bento-image-link"
+                   href="img/portfolio-1.jpg"
+                   target="_blank"
+                   aria-label="View photography project">
+                    <img src="img/portfolio-1.jpg"
+                         alt="Featured photography project"
+                         loading="lazy">
+                </a>
+                <div class="bento-overlay">
+                    <span class="bento-category">PHOTOGRAPHY</span>
+                    <h3>Featured Photography</h3>
+                    <p>Creative moments, captured beautifully.</p>
+                    <a class="bento-view"
+                       href="img/portfolio-1.jpg"
+                       target="_blank"
+                       aria-label="Open featured photography">↗</a>
                 </div>
+            </article>
+
+            <!-- Small tile -->
+            <article class="portfolio-item bento-small"
+                     data-category="graphic">
+                <a class="bento-image-link"
+                   href="img/portfolio-2.jpg"
+                   target="_blank"
+                   aria-label="View graphic design project">
+                    <img src="img/portfolio-2.jpg"
+                         alt="Graphic design project"
+                         loading="lazy">
+                </a>
+                <div class="bento-overlay">
+                    <span class="bento-category">GRAPHIC DESIGN</span>
+                    <h3>Creative Design</h3>
+                    <a class="bento-view"
+                       href="img/portfolio-2.jpg"
+                       target="_blank"
+                       aria-label="Open graphic design">↗</a>
+                </div>
+            </article>
+
+            <!-- Tall tile -->
+            <article class="portfolio-item bento-tall"
+                     data-category="album">
+                <a class="bento-image-link"
+                   href="img/portfolio-3.jpg"
+                   target="_blank"
+                   aria-label="View album design project">
+                    <img src="img/portfolio-3.jpg"
+                         alt="Wedding album design"
+                         loading="lazy">
+                </a>
+                <div class="bento-overlay">
+                    <span class="bento-category">ALBUM DESIGN</span>
+                    <h3>Wedding Memories</h3>
+                    <p>Elegant layouts for unforgettable moments.</p>
+                    <a class="bento-view"
+                       href="img/portfolio-3.jpg"
+                       target="_blank"
+                       aria-label="Open album design">↗</a>
+                </div>
+            </article>
+
+            <!-- Wide tile -->
+            <article class="portfolio-item bento-wide"
+                     data-category="video">
+                <a class="bento-image-link"
+                   href="img/portfolio-4.jpg"
+                   target="_blank"
+                   aria-label="View video editing project">
+                    <img src="img/portfolio-4.jpg"
+                         alt="Video editing project"
+                         loading="lazy">
+                </a>
+                <div class="bento-overlay">
+                    <span class="bento-category">VIDEO EDITING</span>
+                    <h3>Visual Stories</h3>
+                    <p>Bringing every frame to life.</p>
+                    <a class="bento-view"
+                       href="img/portfolio-4.jpg"
+                       target="_blank"
+                       aria-label="Open video project image">↗</a>
+                </div>
+            </article>
+
+            <!-- Small tile -->
+            <article class="portfolio-item bento-small"
+                     data-category="photography">
+                <a class="bento-image-link"
+                   href="img/portfolio-5.jpg"
+                   target="_blank"
+                   aria-label="View portrait photography">
+                    <img src="img/portfolio-5.jpg"
+                         alt="Portrait photography"
+                         loading="lazy">
+                </a>
+                <div class="bento-overlay">
+                    <span class="bento-category">PHOTOGRAPHY</span>
+                    <h3>Portraits</h3>
+                    <a class="bento-view"
+                       href="img/portfolio-5.jpg"
+                       target="_blank"
+                       aria-label="Open portrait project">↗</a>
+                </div>
+            </article>
+
+            <!-- Medium tile -->
+            <article class="portfolio-item bento-medium"
+                     data-category="graphic">
+                <a class="bento-image-link"
+                   href="img/portfolio-6.jpg"
+                   target="_blank"
+                   aria-label="View digital artwork">
+                    <img src="img/portfolio-6.jpg"
+                         alt="Digital artwork and graphic design"
+                         loading="lazy">
+                </a>
+                <div class="bento-overlay">
+                    <span class="bento-category">GRAPHIC DESIGN</span>
+                    <h3>Digital Artwork</h3>
+                    <a class="bento-view"
+                       href="img/portfolio-6.jpg"
+                       target="_blank"
+                       aria-label="Open digital artwork">↗</a>
+                </div>
+            </article>
+
+            <!-- Wide bottom tile -->
+            <article class="portfolio-item bento-bottom-wide"
+                     data-category="album">
+                <a class="bento-image-link"
+                   href="https://images.template.net/wp-content/uploads/2022/12/Wedding-Album-Sizes.jpeg"
+                   target="_blank"
+                   aria-label="View wedding album project">
+                    <img src="https://images.template.net/wp-content/uploads/2022/12/Wedding-Album-Sizes.jpeg"
+                         alt="Wedding album and photo layout"
+                         loading="lazy">
+                </a>
+                <div class="bento-overlay">
+                    <span class="bento-category">ALBUM DESIGN</span>
+                    <h3>Wedding Album Collection</h3>
+                    <p>Preserving cherished memories in timeless designs.</p>
+                    <a class="bento-view"
+                       href="https://images.template.net/wp-content/uploads/2022/12/Wedding-Album-Sizes.jpeg"
+                       target="_blank"
+                       aria-label="Open wedding album">↗</a>
+                </div>
+            </article>
+
+            <!-- Small final tile -->
+            <article class="portfolio-item bento-small"
+                     data-category="video">
+                <a class="bento-image-link"
+                   href="https://img.magnific.com/free-photo/professional-agency-setup-cinematic-footage-creation-video-editing_482257-118951.jpg?semt=ais_hybrid&w=740&q=80"
+                   target="_blank"
+                   aria-label="View video editing sample">
+                    <img src="https://img.magnific.com/free-photo/professional-agency-setup-cinematic-footage-creation-video-editing_482257-118951.jpg?semt=ais_hybrid&w=740&q=80"
+                         alt="Video editing sample"
+                         loading="lazy">
+                </a>
+                <div class="bento-overlay">
+                    <span class="bento-category">VIDEO EDITING</span>
+                    <h3>Video Moments</h3>
+                    <a class="bento-view"
+                       href="https://img.magnific.com/free-photo/professional-agency-setup-cinematic-footage-creation-video-editing_482257-118951.jpg?semt=ais_hybrid&w=740&q=80"
+                       target="_blank"
+                       aria-label="Open video sample image">↗</a>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
                 <!-- Portfolio Start -->
                 
                 
