@@ -1122,7 +1122,7 @@ a:focus {
 }
 
 .header h1{
-    text:bold
+    
 }
 .header h1,
 .header h2 {
@@ -1336,9 +1336,9 @@ a:focus {
 ========================================= */
 
 .bento-portfolio {
-    --bento-bg: #f3f5ff;
+    --bento-bg: #EAF2F8;
     --bento-ink: #14233b;
-    --bento-accent: #ff7043;
+    --bento-accent: #14B8A6;
     --bento-border: #17202c;
 
     background: var(--bento-bg);
@@ -1377,7 +1377,7 @@ a:focus {
 
 .bento-description {
     max-width: 560px;
-    color: #5d6b80;
+    color: #787d86;
     line-height: 1.8;
     margin: 0;
 }
@@ -1554,7 +1554,7 @@ a:focus {
 }
 
 .bento-portfolio .bento-category {
-    color: #ffd1a9;
+    color: #E7B65C;
     font-size: 10px;
     font-weight: 800;
     letter-spacing: 1.5px;
