@@ -2321,7 +2321,7 @@ h1 {
   text-decoration: none; display: inline-flex; gap: 12px; align-items: center;
 }
 .watermark {
-  position: absolute; right: 0; bottom: -48px; color: #c9c8c4;
+  position: absolute; right: 1; bottom: -48px; color: #c9c8c4;
   font-size: clamp(8rem, 17vw, 15rem); font-weight: 700; line-height: 1;
   letter-spacing: -.08em; pointer-events: none;
 }
