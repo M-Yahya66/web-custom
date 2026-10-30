@@ -1597,7 +1597,7 @@ a:focus {
 }
 
 .bento-portfolio .bento-view:hover {
-    background: #e65028;
+    background: #E7B65C;
     color: #fff;
     transform: rotate(5deg) scale(1.06);
 }
