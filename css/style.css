@@ -2372,6 +2372,29 @@ h1 {
 .plan-card[data-position="behind1"] .card-next-btn {
     color: #aaa;
 }
+
+/* Remove button rectangle / focus border */
+
+.card-next-btn,
+.card-next-btn:focus,
+.card-next-btn:active,
+.card-next-btn:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Keep smooth hover effect */
+.card-next-btn {
+    cursor: pointer;
+    background: transparent;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.card-next-btn:focus-visible {
+    outline: none !important;
+}
+
 @media (max-width: 850px) {
   .hero { grid-template-columns: 1fr; gap: 32px; padding: 36px 24px 50px; }
   h1 { max-width: 12ch; font-size: clamp(2.8rem, 11vw, 5rem); }
