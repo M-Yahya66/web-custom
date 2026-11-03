@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* EXperiance */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --black: #090909;
+  --white: #f4f3ef;
+  --dim: #777774;
+  --card-w: min(48vw, 550px);
+}
+* { box-sizing: border-box; }
+.hero {
+  min-height: 100svh;
+  width: min(1440px, 100%);
+  margin: auto;
+  padding: clamp(24px, 5vw, 76px);
+  display: grid;
+  grid-template-columns: minmax(280px, .8fr) minmax(420px, 1.2fr);
+  gap: clamp(30px, 6vw, 90px);
+  align-items: center;
+  overflow: hidden;
+}
+.hero-copy { position: relative; z-index: 5; }
+.eyebrow {
+  color: #8d8d89; font-size: 9px; letter-spacing: .24em;
+  font-weight: 700; margin: 0 0 22px;
+}
+h1 {
+  font-size: clamp(2.7rem, 5.4vw, 5.7rem);
+  line-height: .96; letter-spacing: -.065em; font-weight: 700;
+  margin: 0; max-width: 8.5ch;
+}
+.carousel-controls { display: flex; align-items: center; gap: 9px; margin-top: 38px; }
+.round-btn {
+  width: 39px; height: 39px; border: 1px solid #30302e; border-radius: 50%;
+  background: #191918; color: #d6d6d2; cursor: pointer; font-size: 17px;
+  transition: background .25s, color .25s, transform .25s;
+}
+.round-btn:hover { transform: translateY(-2px); }
+.active-btn { background: var(--white); color: #101010; }
+.slide-count { color: #aaa; font-size: 10px; margin: 0 7px; white-space: nowrap; }
+.progress { display: flex; gap: 5px; align-items: center; }
+.progress-segment {
+  width: 22px; height: 3px; padding: 0; border: 0; border-radius: 8px;
+  background: #3d3d3a; cursor: pointer; transition: width .3s, background .3s;
+}
+.progress-segment.selected { width: 30px; background: #eee; }
+
+.card-stage {
+  height: min(65vh, 550px); min-height: 390px; position: relative;
+  display: flex; align-items: center; justify-content: center;
+  perspective: 1200px;
+}
+.plan-card {
+  position: absolute; width: var(--card-w); max-width: 560px; height: 74%;
+  border-radius: 25px; padding: 26px 30px; overflow: hidden;
+  background: #d9d8d4; color: #101010;
+  display: flex; flex-direction: column;
+  transition: transform .65s cubic-bezier(.2,.8,.2,1), opacity .55s, background .5s;
+  box-shadow: 0 22px 60px #0006;
+}
+.plan-card header {
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 30px; font-weight: 700; position: relative; z-index: 2;
+}
+.plan-card header small { font-size: 9px; color: #666; }
+.card-copy {
+  position: relative; z-index: 2; margin-top: auto; margin-bottom: 8px;
+  max-width: 370px;
+}
+.card-copy p {
+  font-size: 12px; line-height: 1.15;
+  letter-spacing: -.035em; font-weight: 700; margin: 0 0 22px;
+}
+.card-copy a {
+  color: #555; font-size: 8px; font-weight: 700; letter-spacing: .2em;
+  text-decoration: none; display: inline-flex; gap: 12px; align-items: center;
+}
+.watermark {
+  position: absolute; right: 1; bottom: -48px; color: #c9c8c4;
+  font-size: clamp(8rem, 17vw, 15rem); font-weight: 700; line-height: 1;
+  letter-spacing: -.08em; pointer-events: none;
+}
+.plan-card[data-position="active"] { z-index: 3; opacity: 1; transform: translate(0, 0) rotate(0) scale(1); background: #f1f0ec; }
+.plan-card[data-position="behind1"] { z-index: 2; opacity: .92; transform: translate(12px, -25px) scale(.98); background: #292928; color: #eee; }
+.plan-card[data-position="behind1"] header small,
+.plan-card[data-position="behind1"] .card-copy a { color: #aaa; }
+.plan-card[data-position="behind1"] .watermark { color: #333; }
+.plan-card[data-position="behind2"] { z-index: 1; opacity: .75; transform: translate(22px, -48px) scale(.96); background: #1a1a19; color: #eee; }
+.plan-card[data-position="behind2"] header small,
+.plan-card[data-position="behind2"] .card-copy a { color: #aaa; }
+.plan-card[data-position="behind2"] .watermark { color: #252525; }
+.chat-link {
+  position: absolute; z-index: 8; bottom: 5%; right: 30px;;
+  background: #f5f4f0; color: #111; text-decoration: none;
+  border-radius: 999px; padding: 11px 15px; font-size: 10px; font-weight: 700;
+  display: flex; align-items: center; gap: 8px; box-shadow: 0 8px 25px #0003;
+}
+.chat-dot { width: 6px; height: 6px; background: #111; border-radius: 50%; }
+.contact { padding: 70px 8vw; border-top: 1px solid #262626; color: #aaa; }
+.contact a { color: #f4f3ef; }
+
+@media (max-width: 850px) {
+  .hero { grid-template-columns: 1fr; gap: 32px; padding: 36px 24px 50px; }
+  h1 { max-width: 12ch; font-size: clamp(2.8rem, 11vw, 5rem); }
+  .card-stage { height: 430px; min-height: 360px; }
+  :root { --card-w: min(82vw, 520px); }
+  .plan-card { height: 78%; padding: 22px; }
+  .chat-link { right: 2%; bottom: 1%; }
+}
+@media (max-width: 430px) {
+  .card-stage { height: 370px; }
+  .plan-card { border-radius: 20px; }
+  .card-copy p { font-size: 1.1rem; }
+  .progress-segment { width: 15px; }
+  .progress-segment.selected { width: 22px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; scroll-behavior: auto !important; }
+}
+
+    </style>
+    <script src="sc.js"></script>
+</head>
+<body>
+    <main class="hero" id="Experience">
+    <section class="hero-copy">
+      <p class="eyebrow">MY JOURNEY</p>
+      <h1>Experience <br>that shapes my work. <br></h1>
+      <p>Teaching, designing, and creating meaningful work through different skills.</p>
+
+      <div class="carousel-controls">
+        <button class="round-btn" id="prev" aria-label="Previous card">←</button>
+        <button class="round-btn active-btn" id="next" aria-label="Next card">→</button>
+        <span class="slide-count" id="count">1 of 2</span>
+        <div class="progress" id="progress" aria-label="Carousel progress">
+          <button aria-label="Show slide 1" data-slide="0" class="progress-segment"></button>
+          <button aria-label="Show slide 2" data-slide="1" class="progress-segment"></button>
+          
+        </div>
+      </div>
+    </section >
+
+    <section class="card-stage" aria-label="Plans carousel">
+      <article class="plan-card" data-index="0">
+        <header><span>Personal Tuition Teacher</span><small>01</small></header>
+        <small>Edachakai, Padane</small>
+        <div class="card-copy">
+          <p>Provided personalized home tuition to students across subjects. With over 5 years of teaching experience, I focus on strengthening understanding, improving learning skills, and helping students reach their educational goals.</p>
+          <a href="#contact">contact <span>↗</span></a>
+
+        </div>
+        <span class="watermark">01</span>
+      </article>
+      <article class="plan-card" data-index="1" >
+        <header><span>Marriage Album Creation</span><small>02</small></header>
+        <small>Edachakai, Padane</small>
+        <div class="card-copy">
+          <p>Crafted elegant, personalized wedding albums with creative photo compositions and thoughtful layouts, transforming precious moments into timeless visual stories that beautifully preserve love and cherished memories.</p>
+          <a href="#contact" >contact <span>↗</span></a>
+        </div>
+        <span class="watermark">02</span>
+      </article>
+      
+      <a class="chat-link" href="#contact"><span class="chat-dot"></span> Chat with us</a>
+    </section>
+  </main>
+<script src="sc.js"></script>
+
+</body>
+</html>

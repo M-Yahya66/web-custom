@@ -2244,7 +2244,7 @@ a:focus {
 }
 
 /* EXperiance */
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
 
 :root {
   --black: #090909;
@@ -2335,7 +2335,7 @@ h1 {
 .plan-card[data-position="behind2"] .card-copy a { color: #aaa; }
 .plan-card[data-position="behind2"] .watermark { color: #252525; }
 .chat-link {
-  position: absolute; z-index: 8; bottom: 5%; right: 0;
+  position: absolute; z-index: 8; bottom: 5%; right: 30px;;
   background: #f5f4f0; color: #111; text-decoration: none;
   border-radius: 999px; padding: 11px 15px; font-size: 10px; font-weight: 700;
   display: flex; align-items: center; gap: 8px; box-shadow: 0 8px 25px #0003;
@@ -2343,7 +2343,35 @@ h1 {
 .chat-dot { width: 6px; height: 6px; background: #111; border-radius: 50%; }
 .contact { padding: 70px 8vw; border-top: 1px solid #262626; color: #aaa; }
 .contact a { color: #f4f3ef; }
+/* NEXT CARD BUTTON */
 
+.card-next-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 0;
+    border: none;
+    background: transparent;
+
+    color: #555;
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .2em;
+
+    cursor: pointer;
+    transition: gap .3s, color .3s;
+}
+
+.card-next-btn:hover {
+    gap: 20px;
+    color: #000;
+}
+
+.plan-card[data-position="behind1"] .card-next-btn {
+    color: #aaa;
+}
 @media (max-width: 850px) {
   .hero { grid-template-columns: 1fr; gap: 32px; padding: 36px 24px 50px; }
   h1 { max-width: 12ch; font-size: clamp(2.8rem, 11vw, 5rem); }

@@ -409,42 +409,140 @@ document.addEventListener("DOMContentLoaded", function () {
 })();
 
 })(jQuery);
-/*Experience*/
-(function ($) {
+
+/* =================================
+   EXPERIENCE CAROUSEL
+================================= */
+
+(function () {
+
     "use strict";
 
-    const cards = [...document.querySelectorAll(".plan-card")];
-const count = document.querySelector("#count");
-const progressButtons = [...document.querySelectorAll(".progress-segment")];
-let active = 2; // Premium is front-most initially, like the reference video.
+    const cards = [
+        ...document.querySelectorAll(".plan-card")
+    ];
 
-function paintCarousel() {
-  // Arrange the selected card at the front, followed by the other two behind it.
-  cards.forEach((card, index) => {
-    const relative = (index - active + cards.length) % cards.length;
-    card.dataset.position = ["active", "behind1", "behind2"][relative];
-  });
-  count.textContent = `${active + 1} of ${cards.length}`;
-  progressButtons.forEach((button, index) => {
-    button.classList.toggle("selected", index === active);
-    button.setAttribute("aria-current", index === active ? "true" : "false");
-  });
-}
+    const count = document.querySelector("#count");
 
-function go(direction) {
-  active = (active + direction + cards.length) % cards.length;
-  paintCarousel();
-}
+    const progressButtons = [
+        ...document.querySelectorAll(".progress-segment")
+    ];
 
-document.querySelector("#prev").addEventListener("click", () => go(-1));
-document.querySelector("#next").addEventListener("click", () => go(1));
-progressButtons.forEach(button => {
-  button.addEventListener("click", () => {
-    active = Number(button.dataset.slide);
-    paintCarousel();
-  });
+    const prevButton = document.querySelector("#prev");
+    const nextButton = document.querySelector("#next");
+
+    // Start with the first card
+    let active = 0;
+
+    // Check if required HTML elements exist
+    if (
+        cards.length === 0 ||
+        !count ||
+        !prevButton ||
+        !nextButton
+    ) {
+        return;
+    }
+
+    // NEXT CARD BUTTON INSIDE EACH CARD
+
+document.querySelectorAll(".card-next-btn").forEach(button => {
+
+    button.addEventListener("click", function () {
+
+        go(1);
+
+    });
+
 });
-paintCarousel();
-  
-})(jQuery);
 
+    function paintCarousel() {
+
+        cards.forEach((card, index) => {
+
+            const relative =
+                (index - active + cards.length) % cards.length;
+
+            card.dataset.position =
+                relative === 0 ? "active" : "behind1";
+
+        });
+
+        // Update counter
+        count.textContent =
+            `${active + 1} of ${cards.length}`;
+
+        // Update progress indicators
+        progressButtons.forEach((button, index) => {
+
+            button.classList.toggle(
+                "selected",
+                index === active
+            );
+
+            button.setAttribute(
+                "aria-current",
+                index === active ? "true" : "false"
+            );
+
+        });
+
+    }
+
+    // Next / Previous navigation
+    function go(direction) {
+
+        active =
+            (active + direction + cards.length) % cards.length;
+
+        paintCarousel();
+
+    }
+
+    // Previous button
+    prevButton.addEventListener("click", function () {
+        go(-1);
+    });
+
+    // Next button
+    nextButton.addEventListener("click", function () {
+        go(1);
+    });
+
+    // Progress buttons
+    progressButtons.forEach(button => {
+
+        button.addEventListener("click", function () {
+
+            const slide = Number(button.dataset.slide);
+
+            if (
+                Number.isInteger(slide) &&
+                slide >= 0 &&
+                slide < cards.length
+            ) {
+                active = slide;
+                paintCarousel();
+            }
+
+        });
+
+    });
+
+    // Keyboard navigation
+    document.addEventListener("keydown", function (event) {
+
+        if (event.key === "ArrowRight") {
+            go(1);
+        }
+
+        if (event.key === "ArrowLeft") {
+            go(-1);
+        }
+
+    });
+
+    // Initial display
+    paintCarousel();
+
+})();
